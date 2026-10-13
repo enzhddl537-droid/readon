@@ -1,0 +1,664 @@
+@charset "utf-8";
+
+/* =========================
+RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+}
+
+.resheaderlogo {
+    display: none;
+}
+
+/* =========================
+FONT
+========================= */
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Pretendard';
+    /* overflow: hidden; */
+}
+
+
+/* =========================
+전체
+========================= */
+
+.entirewrap {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: none;
+    z-index: 9999;
+}
+
+
+/* =========================
+배경
+========================= */
+
+.popupbox {
+    width: 100%;
+    height: 97%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* padding: 65px 0; */
+
+}
+
+.popupwrap {
+    width: 48%;
+    height: 86%;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 8px;
+
+}
+
+
+/* =========================
+팝업
+========================= */
+
+.popup_kyh {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 104px 120px 190px 120px;
+    /* background: #F5F3EE url('../img/city.png') center calc(100% + 50px) / 100% auto no-repeat; */
+    position: relative;
+    flex-shrink: 0
+}
+
+
+/* =========================
+중앙 카드
+========================= */
+
+.popup_info {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    gap: 24px;
+    font-family: 'Pretendard';
+    align-items: start;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 0 auto;
+}
+
+
+/* 프로필 사진 */
+
+.popup_info>img {
+    width: 280px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+
+/* =========================
+HISTORY
+========================= */
+
+.history {
+    min-width: 0;
+}
+
+
+/* 이름 / SNS */
+
+.history_sub {
+    width: 105%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #777;
+}
+
+
+.sub_name {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.job {
+    font-size: 1.6rem;
+    padding-top: 4px;
+}
+
+
+.name {
+    font-size: 2rem;
+
+}
+
+
+/* SNS */
+
+.sns {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.sns img {
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    object-fit: contain;
+
+    cursor: pointer;
+}
+
+.sns img:hover {
+    width: 26px;
+    height: 26px;
+    margin: 0px;
+}
+
+.titlewhite {
+    display: none;
+}
+
+.storylogo2 {
+    display: none;
+}
+
+/* =========================
+연혁
+========================= */
+
+.history_career {
+    display: flex;
+    gap: 32px;
+    margin-top: 12px;
+}
+
+
+.year,
+.list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.year li {
+    font-size: 1.6rem;
+
+    line-height: 1.5;
+}
+
+
+.list li {
+    font-size: 1.6rem;
+
+    line-height: 1.5;
+}
+
+
+/* 2024 항목이 두 줄이므로 높이 맞춤 */
+
+.year li:nth-child(3),
+.list li:nth-child(3) {
+    min-height: 42px;
+}
+
+.year li:nth-child(4) {
+    margin-top: 1px;
+}
+
+
+/* =========================
+BOOK
+========================= */
+
+.book {
+    width: 74%;
+
+    margin: 0 auto;
+    margin-top: -36%;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+
+.book img {
+    display: block;
+    width: 108px;
+    height: 164px;
+    transition: 1s;
+}
+
+
+/* 책끼리 조금 붙이기 */
+
+.book img+img {
+    margin-left: -20px;
+}
+
+
+
+
+/* =========================
+해시태그
+========================= */
+
+.hashtag {
+    width: 66%;
+    font-family: 'Pretendard';
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    gap: 18px;
+}
+
+
+.hashtag p {
+    font-size: 20px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+NEXT
+========================= */
+
+.next {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99; */
+
+}
+
+
+.next img {
+    /* width: 24px;
+    height: 24px;
+    margin: 2px;
+    object-fit: contain;
+
+    cursor: pointer; */
+}
+
+/* .next img:hover {
+    width: 26px;
+    height: 26px;
+} */
+
+
+/* =========================
+OUT
+========================= */
+
+.out {
+    position: absolute;
+    left: 100%;
+    top: 13%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    z-index: 99;
+
+}
+
+
+.out img {
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    object-fit: contain;
+
+    cursor: pointer;
+}
+
+.out img:hover {
+    width: 26px;
+    height: 26px;
+}
+
+
+/* =========================
+CTA
+========================= */
+
+.cta {
+    width: 147px;
+    height: 56px;
+    margin: 0 auto;
+    position: relative;
+    /* top: 77%; */
+    background: #1D2015;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.cta p {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.cta:hover {
+    background: #00d94f;
+}
+
+
+
+
+
+
+
+/* 한로로 */
+.popup_hrr {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 104px 120px 190px 120px;
+    /* background: #F5F3EE url('../img/city.png') center calc(100% + 50px) / 100% auto no-repeat; */
+    position: relative;
+    flex-shrink: 0
+}
+
+.popup_hrr .book {
+    gap: 10%;
+}
+.popup_hrr .person_bottom {
+    margin-top: -4.5%;
+}
+
+/* .popup_hrr .book iframe {
+    width: 400;
+    height: 180px;
+} */
+
+/* .popup_hrr .history_sub {
+    width: 109%;
+} */
+
+
+
+
+/* 김민경 */
+.popup_kmk {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 104px 120px 190px 120px;
+    /* background: #F5F3EE url('../img/city.png') center calc(100% + 50px) / 100% auto no-repeat; */
+    position: relative;
+    flex-shrink: 0
+}
+
+.popup_kmk .history_sub {
+    width: 100%;
+}
+
+.popup_kmk .year li:nth-child(1) {
+    min-height: 85px;
+}
+
+.popup_kmk .list li {
+    width: 95%;
+}
+
+.popup_kmk .year li:nth-child(3),
+.list li:nth-child(3) {
+    min-height: 0px;
+}
+
+.popup_kmk .book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+}
+
+.recommend {
+    display: flex;
+}
+
+.recommend p {
+    font-size: 1rem;
+    font-family: 'Pretendard';
+}
+
+.popup_kmk .recommend img+img {
+    margin-left: 5px;
+}
+
+.popup_kmk .recommend img {
+    display: block;
+    width: 92px;
+    height: 148px;
+}
+
+.detail {
+    display: flex;
+    gap: -10%;
+    position: relative;
+    left: -5%;
+}
+
+/* .popup_kmk .detail iframe {
+    position: relative;
+    left: -6%;
+    width: 290px;
+    height: 163px;
+    margin-top: -36%;
+} */
+
+.popup_kmk .hashtag {
+    margin-top: -48px;
+}
+
+
+
+/* 신시연 */
+.popup_ssy {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 104px 120px 190px 120px;
+    /* background: #F5F3EE url('../img/city.png') center calc(100% + 50px) / 100% auto no-repeat; */
+    position: relative;
+    flex-shrink: 0
+}
+
+.popup_ssy .history_sub {
+    width: 100%;
+}
+
+.popup_ssy .book {
+   
+}
+
+/* .popup_ssy .book iframe {
+    width: 290px;
+    height: 163px;
+} */
+
+.popup_ssy .year li:nth-child(1) {
+    min-height: 60px;
+}
+
+/* .popup_ssy .year li:nth-child(2) {
+    min-height: 12px;
+} */
+
+
+
+
+/* 궤도 */
+.popup_gd {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 104px 120px 190px 120px;
+    /* background: #F5F3EE url('../img/city.png') center calc(100% + 50px) / 100% auto no-repeat; */
+    position: relative;
+    flex-shrink: 0
+}
+
+.popup_gd .history_sub {
+    /* width: 108%; */
+}
+.popup_gd .history_career {
+    margin-top: 8%;
+}
+
+.popup_gd .year li:nth-child(1) {
+    min-height: 48px;
+}
+
+.popup_gd .year li:nth-child(2) {
+    min-height: 24px;
+}
+
+
+
+/* 이슬아 */
+.popup_lsa {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 104px 120px 190px 120px;
+    /* background: #F5F3EE url('../img/city.png') center calc(100% + 50px) / 100% auto no-repeat; */
+    position: relative;
+    flex-shrink: 0
+}
+
+.popup_lsa .history_career {
+    margin-top: 25px;
+    
+}
+
+.popup_lsa .year li:nth-child(3) {
+    margin-top: -23px;
+}
+
+.popup_lsa .year li:nth-child(3),
+.list li:nth-child(3) {
+    min-height: 0px;
+}
+
+
+/* ==================================================
+   BOOKTALK DETAIL POPUP - CONTINUOUS PC SCALE
+   1920px layout is kept as the single source of truth.
+   JS scales the whole modal stage continuously from
+   1920px down to 769px, so inner proportions never
+   switch at 1200px.
+================================================== */
+.popupbox {
+    position: relative;
+    overflow: hidden;
+}
+
+.popup-modal-stage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 100%;
+    transform: translateX(-50%) scale(1);
+    transform-origin: top center;
+    will-change: transform;
+}
+
+/* Keep the original 1920 modal geometry inside the fixed stage. */
+.popup-modal-stage .popupwrap {
+    width: 48%;
+    height: 86%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1919px) {
+
+    /*
+      Do not resize individual popup children here.
+      The full modal stage is scaled by popup.js instead.
+    */
+    .popup-modal-stage .popupwrap {
+        width: 48%;
+        height: 86%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popup-modal-stage {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,430 @@
+/* 팝업섹션_0928 — 1920 × 950 피그마 프레임, PC에만 적용 */
+
+
+@media(min-width: 1200px) {
+  .popup0928 .popup0928-panel {
+    top: 90px !important;
+  }
+  
+}
+@media (min-width: 769px) {
+  .popup0928 {
+    background: #4d5838;
+    color: #2b2f1f;
+    overflow: hidden;
+    height: 950px;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .popup0928 .popup0928-legacy-responsive {
+    display: none;
+  }
+
+  .popup0928 .popup0928-scene {
+    position: relative;
+    width: 1920px;
+    height: 950px;
+    margin: 0 auto;
+    transform-origin: top left;
+    font-family: "Pretendard", Arial, sans-serif;
+  }
+  .popup0928 .popup0928-map {
+    position: absolute;
+    left: 84px;
+    top: 88px;
+    width: 1110px;
+    height: 832px;
+  }
+  .popup0928 .popup0928-map-art {
+    display: block;
+    width: 1110px;
+    height: 832px;
+    object-fit: contain;
+    transition: filter 0.36s ease;
+  }
+
+  .popup0928.has-selection .popup0928-map-art {
+    filter: brightness(0.47);
+  }
+
+  .popup0928 .popup0928-zone {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    transition: filter 0.36s ease, transform 0.36s ease;
+  }
+
+  .popup0928 .popup0928-zone:hover {
+    transform: translateY(-5px);
+  }
+
+  .popup0928 .popup0928-zone img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .popup0928 .popup0928-zone--photo {
+    left: 383px;
+    top: 134px;
+    width: 159px;
+    height: 159px;
+  }
+
+  .popup0928 .popup0928-zone--reading {
+    left: 303px;
+    top: 395px;
+    width: 282px;
+    height: 253px;
+  }
+
+  .popup0928 .popup0928-zone--scent {
+    left: 534px;
+    top: 352px;
+    width: 171px;
+    height: 169px;
+  }
+
+  .popup0928.has-selection .popup0928-zone:not(.is-selected) {
+    filter: brightness(0.38);
+  }
+
+  .popup0928 .popup0928-bubble {
+    position: absolute;
+    left: 50%;
+    top: -14px;
+    transform: translate(-50%, -100%);
+    display: none;
+    min-width: 82px;
+    height: 41px;
+    padding: 10px 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #fff;
+    color: #000;
+    font-family: Inter, "Pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    line-height: 21px;
+    white-space: nowrap;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .popup0928 .popup0928-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    border: 8px solid transparent;
+    border-top-color: #fff;
+  }
+
+  .popup0928 .popup0928-zone--photo .popup0928-bubble {
+    top: -2px;
+  }
+
+  .popup0928 .popup0928-zone--reading .popup0928-bubble {
+    left: 26%;
+    top: 0;
+  }
+
+  .popup0928 .popup0928-zone--scent .popup0928-bubble {
+    left: 63%;
+    top: 0;
+  }
+
+  .popup0928 .popup0928-zone.is-selected .popup0928-bubble {
+    display: block;
+  }
+
+  .popup0928 .popup0928-entrance {
+    position: absolute;
+    z-index: 3;
+    left: 186px;
+    top: 569px;
+    width: 94px;
+    height: 115px;
+  }
+
+  .popup0928 .popup0928-entrance img {
+    position: absolute;
+    top: 21px;
+    width: 94px;
+    height: 94px;
+  }
+
+  .popup0928 .popup0928-entrance span {
+    position: absolute;
+    z-index: 1;
+    top: -3px;
+    left: 1px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 3px solid #f60e1f;
+    border-radius: 25px;
+    color: #000;
+    font: 500 16px/19px Inter, "Pretendard", sans-serif;
+  }
+
+  .popup0928 .popup0928-panel {
+    position: absolute;
+    left: 968px;
+    top: 136px;
+    width: 752px;
+    height: 765px;
+    border-radius: 10px;
+    background: #e6e6e6;
+    box-shadow: 9px 10px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  .popup0928 .popup0928-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.38s ease, transform 0.38s ease, visibility 0.38s;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .popup0928 .popup0928-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .popup0928 .popup0928-intro-logo {
+    position: absolute;
+    left: 153px;
+    top: 69px;
+    width: 435px;
+    height: 194px;
+    object-fit: contain;
+  }
+
+  .popup0928 .popup0928-intro-copy {
+    position: absolute;
+    left: 0;
+    top: 297px;
+    width: 100%;
+    margin: 0;
+    color: #000;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .popup0928 .popup0928-intro-cards {
+    position: absolute;
+    left: 93px;
+    top: 401px;
+    width: 574px;
+    display: grid;
+    grid-template-columns: repeat(3, 174px);
+    column-gap: 26px;
+  }
+
+  .popup0928 .popup0928-intro-cards button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font: 500 20px/25px "Pretendard", sans-serif;
+    color: #000;
+  }
+
+  .popup0928 .popup0928-intro-cards img {
+    display: block;
+    width: 174px;
+    height: 243px;
+    margin: 0 auto 12px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .popup0928 .popup0928-intro-cards button:hover img {
+    filter: brightness(0.88);
+  }
+
+  .popup0928 .popup0928-hero {
+    position: absolute;
+    left: 94px;
+    top: 75px;
+    width: 570px;
+    height: 318px;
+    object-fit: cover;
+  }
+
+  .popup0928 .popup0928-detail h2 {
+    position: absolute;
+    top: 419px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    color: #2b2f1f;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+
+  .popup0928 .popup0928-description {
+    position: absolute;
+    top: 460px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .popup0928 .popup0928-items {
+    position: absolute;
+    left: 48px;
+    top: 519px;
+    width: 656px;
+    display: grid;
+    margin: 0;
+  }
+
+  .popup0928 .popup0928-items--four {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+
+  .popup0928 .popup0928-items--three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+
+  .popup0928 .popup0928-items figure {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .popup0928 .popup0928-items figure>img {
+    display: block;
+    margin: 0 auto;
+    width: 127px;
+    height: 124px;
+    object-fit: cover;
+  }
+
+  .popup0928 .popup0928-items--four figure>img {
+    width: 147px;
+  }
+
+  .popup0928 .popup0928-items figcaption {
+    margin-top: 11px;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    color: #2b2f1f;
+  }
+
+  .popup0928 .popup0928-items--three figcaption {
+    margin-top: 8px;
+    letter-spacing: 0;
+  }
+
+  .popup0928 .popup0928-items figcaption strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .popup0928 .popup0928-items figcaption em {
+    color: #a5b54d;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .popup0928 .popup0928-items figcaption small {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .popup0928 .popup0928-photo-items figcaption strong img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+
+  .popup0928 .popup0928-photo-items figure:first-child figcaption strong img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .popup0928 .popup0928-photo-items figure:last-child figcaption strong img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* 769px ~ 1200px: 새 PC 팝업 구성을 그대로 비율 축소 */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .popup0928 {
+    position: relative;
+    background: #4d5838;
+    color: #2b2f1f;
+    overflow: hidden;
+    height: 593.75px;
+    /* JS가 실제 섹션 너비 기준으로 재계산 */
+    min-height: 0;
+    padding: 0;
+  }
+
+  .popup0928 .popup0928-legacy-responsive {
+    display: none;
+  }
+
+  .popup0928 .popup0928-scene {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 950px;
+    margin: 0;
+    transform-origin: top left;
+    font-family: "Pretendard", Arial, sans-serif;
+  }
+}
+
+/* 768px 이하에서는 기존 태블릿/모바일 팝업 구조 유지 */
+@media (max-width: 768px) {
+  .popup0928 .popup0928-scene {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .popup0928 .popup0928-slide,
+  .popup0928 .popup0928-zone,
+  .popup0928 .popup0928-map::after {
+    transition: none;
+  }
+}

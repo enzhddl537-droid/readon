@@ -1,0 +1,1577 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: #fafbfb;
+    color: #2b2f1f;
+    font-family: 'Pretendard'
+}
+
+button,
+input {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.reservation-page {
+    min-height: 920px;
+    background: #fafbfb;
+    position: relative;
+    padding-top: 1px
+}
+
+.header {
+    height: 36px;
+    width: min(1682px, calc(100% - 120px));
+    margin: 49px auto 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5
+}
+
+.logo {
+    width: 118px;
+    height: 36px;
+    display: block;
+    flex: 0 0 auto
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block
+}
+
+.nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 58px;
+    font-size: 1.6rem;
+    letter-spacing: -.48px
+}
+
+.nav a {
+    white-space: nowrap
+}
+
+.nav .active {
+    font-weight: 600
+}
+
+.lang {
+    border: 0;
+    background: transparent;
+    margin-left: 54px;
+    font-size: 1.6rem;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.reservation-inner {
+    width: min(1680px, calc(100% - 120px));
+    margin: 55px auto 40px;
+    display: grid;
+    grid-template-columns: 760px minmax(0, 820px);
+    gap: 100px
+}
+
+.visual-card,
+.booking-card {
+    height: 740px;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative
+}
+
+.visual-card {
+    background: #2b2f1f
+}
+
+.visual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13, 15, 10, .75), rgba(13, 15, 10, .05))
+}
+
+.visual-copy {
+    position: absolute;
+    left: 56px;
+    right: 56px;
+    bottom: 49px;
+    color: #fff
+}
+
+.eyebrow {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin: 0;
+    color: #01d342
+}
+
+.eyebrow.light {
+    color: #f2edd6
+}
+
+.visual-copy h1 {
+    font-size: 4.6rem;
+    line-height: 1.02;
+    letter-spacing: -1.2px;
+    margin: 20px 0 24px;
+    font-weight: 600
+}
+
+.visual-desc {
+    font-size: 1.8rem;
+    line-height: 1.55;
+    margin: 0 0 48px;
+    color: #f2f2eb
+}
+
+.visual-date {
+    font-size: 1.5rem;
+    margin: 0
+}
+
+.booking-card {
+    border: 1px solid #d9d9d9;
+    background: #fafbfb;
+    padding: 51px 57px
+}
+
+.booking-head h2 {
+    font-size: 3.4rem;
+    line-height: 1.3;
+    margin: 8px 0;
+    font-weight: 400
+}
+
+.booking-head>p:last-child {
+    font-size: 1.6rem;
+    margin: 0
+}
+
+.option-group {
+    margin-top: 48px
+}
+
+.people-group {
+    margin-top: 48px
+}
+
+.option-group h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 0 20px
+}
+
+.option-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap
+}
+
+.chip {
+    height: 50px;
+    padding: 0 28px;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    background: #fafbfb;
+    color: #2b2f1f;
+    font-size: 1.6rem;
+    min-width: 132px
+}
+
+.chip.people {
+    min-width: 100px;
+    padding: 0 20px
+}
+
+.chip.selected {
+    background: #01d342;
+    border-color: #01d342;
+    color: #fafbfb
+}
+
+.notice {
+    font-size: 1.5rem;
+    margin: 18px 0 42px
+}
+
+.summary {
+    height: 58px;
+    border-radius: 14px;
+    background: rgba(217, 217, 217, .35);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.6rem
+}
+
+.reserve-btn {
+    width: 100%;
+    height: 64px;
+    border: 0;
+    border-radius: 32px;
+    background: #2b2f1f;
+    color: #fafbfb;
+    font-size: 1.8rem;
+    margin-top: 18px
+}
+
+.faq-page {
+    min-height: 920px;
+    background: #fafbfb;
+    padding: 115px 60px 120px
+}
+
+.faq-section {
+    max-width: 1680px;
+    margin: 0 auto
+}
+
+.faq-section>h2 {
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin: 32px 0 36px
+}
+
+.faq-list {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    border-top: 1px solid #d9d9d9
+}
+
+.faq-item {
+    border-bottom: 1px solid #d9d9d9;
+    overflow: hidden
+}
+
+.faq-question {
+    width: 100%;
+    height: 72px;
+    border: 0;
+    background: transparent;
+    color: #2b2f1f;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1.7rem
+}
+
+.faq-icon {
+    font-family: 'Pretendard';
+    font-size: 2.8rem;
+    font-weight: 400;
+    opacity: .6;
+    padding-right: 4px
+}
+
+.faq-answer {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    opacity: .68;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 4px;
+    transition: max-height .28s ease, padding .28s ease
+}
+
+.faq-item.open .faq-answer {
+    max-height: 110px;
+    padding: 0 4px 30px
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px
+}
+
+.modal.show {
+    display: flex
+}
+
+.modal-dim {
+    position: absolute;
+    inset: 0;
+    background: rgba(43, 47, 31, .32)
+}
+
+.modal-box {
+    position: relative;
+    width: 640px;
+    max-width: 100%;
+    height: 680px;
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 28px;
+    background: #fafbfb;
+    padding: 41px 47px 49px;
+    z-index: 1
+}
+
+.modal-box h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0
+}
+
+.modal-intro {
+    font-size: 1.5rem;
+    opacity: .68;
+    margin: 8px 0 25px
+}
+
+.modal-close {
+    position: absolute;
+    right: 47px;
+    top: 28px;
+    border: 0;
+    background: transparent;
+    color: #2b2f1f;
+    font-size: 3rem;
+    opacity: .7;
+    line-height: 1
+}
+
+.modal-summary {
+    height: 82px;
+    border-radius: 16px;
+    background: rgba(217, 217, 217, .55);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px
+}
+
+.modal-summary strong {
+    font-size: 1.6rem;
+    font-weight: 400
+}
+
+.modal-summary span {
+    font-size: 1.3rem;
+    opacity: .68
+}
+
+.modal-box form>label:not(.privacy) {
+    display: block;
+    margin-bottom: 8px
+}
+
+.modal-box label>span:first-child {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px
+}
+
+.modal-box input[type=text],
+.modal-box input[type=tel],
+.modal-box input[type=email] {
+    width: 100%;
+    height: 54px;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    background: #fafbfb;
+    padding: 0 15px;
+    outline: none;
+    font-size: 1.4rem
+}
+
+.modal-box input:focus {
+    border-color: #2b2f1f
+}
+
+.privacy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    font-size: 1.3rem;
+    opacity: .78
+}
+
+.privacy input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2b2f1f;
+    border-radius: 5px;
+    background: #fafbfb;
+    display: grid;
+    place-content: center;
+    margin: 0
+}
+
+.privacy input:checked::after {
+    content: "✓";
+    font-size: 1.4rem;
+    color: #2b2f1f
+}
+
+.privacy span {
+    margin: 0 !important
+}
+
+.modal-actions {
+    display: grid;
+    grid-template-columns: 164px 1fr;
+    gap: 20px;
+    margin-top: 44px
+}
+
+.cancel-btn,
+.confirm-btn {
+    height: 54px;
+    border-radius: 14px;
+    font-size: 1.5rem
+}
+
+.cancel-btn {
+    border: 1px solid #d9d9d9;
+    background: #fafbfb;
+    color: #2b2f1f
+}
+
+.confirm-btn {
+    border: 0;
+    background: #2b2f1f;
+    color: #fafbfb
+}
+
+body.modal-open {
+    overflow: hidden
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    height: 514px;
+    background: #E7E7E7;
+    color: #7D7D7D;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1920px;
+    height: 514px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+.footer-logo {
+    position: absolute;
+    left: 145px;
+    top: 52px;
+    width: 252.42px;
+    height: 141px;
+    z-index: 2;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.footer-line {
+    position: absolute;
+    left: 163px;
+    top: 161px;
+    width: 1598px;
+    height: 1px;
+    background: #A1A1A1;
+    z-index: 1;
+}
+
+.footer-content {
+    position: absolute;
+    left: 163px;
+    right: 159px;
+    top: 175px;
+    height: 263px;
+}
+
+.footer-info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    height: 24px;
+    color: #7D7D7D;
+    line-height: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.footer-menu a {
+    font-size: 1.6rem;
+}
+.footer-menu a,
+.footer-menu span {
+    color: #7D7D7D;
+}
+
+.footer-menu a {
+    text-decoration: none;
+}
+
+.footer-menu span {
+    margin: 0 7px;
+}
+
+.company-info {
+    margin-top: 34px;
+}
+
+.company-info p {
+    margin: 0 0 13px;
+    color: #7D7D7D;
+    font-size: 2rem;
+    line-height: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.company-info p:last-child {
+    margin-bottom: 0;
+}
+
+.copyright {
+    margin: 71px 0 0;
+    color: #7D7D7D;
+    font-size: 2rem;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer-sns {
+    position: absolute;
+    top: 4px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.footer-sns a {
+    width: 44px;
+    height: 44px;
+    display: block;
+    flex: 0 0 44px;
+}
+
+.footer-sns img {
+    width: 44px;
+    height: 44px;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================
+   FIGMA TYPOGRAPHY SYNC
+   예약 01 / FAQ 02 / 예약모달 03 / Group 160
+   전체 폰트: Pretendard
+========================= */
+
+/* 전체 폰트 통일 */
+html,
+body,
+button,
+input,
+textarea,
+select,
+a,
+p,
+span,
+strong,
+h1,
+h2,
+h3,
+label {
+    font-family: 'Pretendard';
+}
+
+/* HEADER - Figma 259:16 */
+.nav,
+.lang {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+}
+
+.nav .active {
+    font-weight: 400;
+}
+
+/* RESERVATION VISUAL - Figma 771 */
+.eyebrow {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.visual-copy h1 {
+    font-size: 4.6rem;
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: 0;
+}
+
+.visual-desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0;
+}
+
+.visual-date {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+/* BOOKING CARD - Figma 771 */
+.booking-head h2 {
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.booking-head>p:last-child {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.option-group h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.chip,
+.chip.people {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.notice {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.summary {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.reserve-btn {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+/* FAQ - Figma 780:16 */
+.faq-section>h2 {
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.faq-question {
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.faq-icon {
+    font-family: 'Pretendard';
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.faq-answer {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+/* MODAL - Figma 786:16 */
+.modal-box h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.modal-intro {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.modal-summary strong {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.modal-summary span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.modal-box form>label:not(.privacy) {
+    font-weight: 400;
+}
+
+.modal-box label>span:first-child {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.modal-box input[type=text],
+.modal-box input[type=tel],
+.modal-box input[type=email] {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.modal-box input::placeholder {
+    font-family: 'Pretendard';
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.privacy {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.cancel-btn,
+.confirm-btn {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+/* GROUP 160 FOOTER - Figma 54:340 */
+.footer-menu,
+.company-info p,
+.copyright {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.footer-menu .privacy-policy {
+    font-family: 'Pretendard';
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-size: 1.6rem;
+}
+
+/* =========================
+   RESPONSIVE
+   Breakpoints: 1200 / 768 / 450
+========================= */
+
+/* ---------- 1200px ---------- */
+@media (max-width: 1200px) {
+    .reservation-page {
+        min-height: auto;
+        padding-bottom: 72px;
+    }
+
+    .header {
+        width: calc(100% - 64px);
+        margin-top: 40px;
+    }
+
+    .nav {
+        gap: 28px;
+        font-size: 1.4rem;
+    }
+
+    .lang {
+        margin-left: 32px;
+        font-size: 1.4rem;
+    }
+
+    .reservation-inner {
+        width: calc(100% - 64px);
+        margin-top: 48px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+        gap: 32px;
+    }
+
+    .visual-card,
+    .booking-card {
+        height: 640px;
+        border-radius: 24px;
+    }
+
+    .visual-copy {
+        left: 42px;
+        right: 42px;
+        bottom: 40px;
+    }
+
+    .visual-copy h1 {
+        font-size: 4rem;
+    }
+
+    .visual-desc {
+        font-size: 1.6rem;
+        margin-bottom: 36px;
+    }
+
+    .booking-card {
+        padding: 42px 40px;
+    }
+
+    .booking-head h2 {
+        font-size: 3.1rem;
+    }
+
+    .option-group,
+    .people-group {
+        margin-top: 38px;
+    }
+
+    .option-row {
+        gap: 10px;
+    }
+
+    .chip {
+        min-width: 112px;
+        height: 46px;
+        padding: 0 20px;
+        font-size: 1.4rem;
+    }
+
+    .chip.people {
+        min-width: 86px;
+        padding: 0 16px;
+    }
+
+    .notice {
+        margin-bottom: 32px;
+    }
+
+    .faq-page {
+        min-height: auto;
+        padding: 96px 48px 110px;
+    }
+
+    .faq-list {
+        width: min(820px, 100%);
+    }
+
+    .footer {
+        height: 420px;
+        min-height: 420px;
+    }
+
+    .footer-inner {
+        height: 420px;
+        padding: 0;
+    }
+
+    .footer-logo {
+        left: 56px;
+        top: 42px;
+        width: 210px;
+        height: 118px;
+    }
+
+    .footer-line {
+        left: 56px;
+        right: 56px;
+        top: 136px;
+        width: auto;
+    }
+
+    .footer-content {
+        left: 56px;
+        right: 56px;
+        top: 150px;
+        height: auto;
+    }
+
+    .footer-menu {
+        font-size: 1.5rem;
+        line-height: 20px;
+        height: auto;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .company-info {
+        margin-top: 26px;
+    }
+
+    .company-info p,
+    .copyright {
+        font-size: 1.5rem;
+        line-height: 21px;
+        white-space: normal;
+    }
+
+    .company-info p {
+        margin-bottom: 8px;
+    }
+
+    .copyright {
+        margin-top: 38px;
+    }
+
+    .footer-sns {
+        top: 2px;
+        right: 0;
+        gap: 14px;
+    }
+
+    .footer-sns a,
+    .footer-sns img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-sns a {
+        flex-basis: 40px;
+    }
+}
+
+/* ---------- 768px ---------- */
+@media (max-width: 768px) {
+    .header {
+        width: calc(100% - 48px);
+        margin-top: 32px;
+    }
+
+    .logo {
+        width: 108px;
+        height: 34px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .lang {
+        margin-left: auto;
+        font-size: 1.4rem;
+    }
+
+    .reservation-inner {
+        width: calc(100% - 48px);
+        margin-top: 38px;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .visual-card {
+        width: 100%;
+        height: 560px;
+        min-height: 0;
+        aspect-ratio: auto;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .visual-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        border-radius: inherit;
+    }
+
+
+    .booking-card {
+        height: auto;
+        min-height: 610px;
+        padding: 40px 36px;
+    }
+
+    .visual-copy {
+        left: 36px;
+        right: 36px;
+        bottom: 36px;
+    }
+
+    .visual-copy h1 {
+        font-size: 3.8rem;
+    }
+
+    .visual-desc {
+        font-size: 1.6rem;
+    }
+
+    .option-row {
+        gap: 12px;
+    }
+
+    .chip {
+        min-width: 120px;
+    }
+
+    .faq-page {
+        padding: 84px 32px 96px;
+    }
+
+    .faq-section>h2 {
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+    }
+
+    .faq-question {
+        font-size: 1.6rem;
+    }
+
+    .modal {
+        padding: 20px;
+    }
+
+    .modal-box {
+        width: min(620px, 100%);
+        height: auto;
+        max-height: calc(100vh - 40px);
+        padding: 38px 34px 34px;
+        border-radius: 24px;
+    }
+
+    .modal-close {
+        right: 30px;
+        top: 24px;
+    }
+
+    .modal-actions {
+        grid-template-columns: 150px 1fr;
+        gap: 16px;
+        margin-top: 36px;
+    }
+
+    .footer {
+        height: 390px;
+        min-height: 390px;
+    }
+
+    .footer-inner {
+        height: 390px;
+        padding: 0;
+    }
+
+    .footer-logo {
+        left: 32px;
+        top: 32px;
+        width: 170px;
+        height: 95px;
+    }
+
+    .footer-line {
+        left: 32px;
+        right: 32px;
+        top: 116px;
+        width: auto;
+    }
+
+    .footer-content {
+        left: 32px;
+        right: 32px;
+        top: 134px;
+        height: auto;
+    }
+
+    .footer-menu {
+        height: auto;
+        flex-wrap: wrap;
+        white-space: normal;
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+
+    .footer-menu span {
+        margin: 0 5px;
+    }
+
+    .company-info {
+        margin-top: 18px;
+    }
+
+    .company-info p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 4px;
+        white-space: normal;
+    }
+
+    .copyright {
+        margin-top: 24px;
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .footer-sns {
+        position: static;
+        margin-top: 22px;
+        gap: 12px;
+    }
+
+    .footer-sns a,
+    .footer-sns img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .footer-sns a {
+        flex-basis: 34px;
+    }
+}
+
+/* ---------- 450px ---------- */
+@media (max-width: 450px) {
+    .reservation-page {
+        padding-bottom: 52px;
+    }
+
+    .header {
+        width: calc(100% - 36px);
+        margin-top: 26px;
+    }
+
+    .logo {
+        width: 104px;
+        height: 32px;
+    }
+
+    .lang {
+        font-size: 1.3rem;
+    }
+
+    .reservation-inner {
+        width: calc(100% - 32px);
+        margin-top: 30px;
+        gap: 18px;
+    }
+
+    .visual-card {
+        min-height: 500px;
+        aspect-ratio: auto;
+        border-radius: 22px;
+    }
+
+    .visual-copy {
+        left: 26px;
+        right: 26px;
+        bottom: 30px;
+    }
+
+    .eyebrow {
+        font-size: 1.2rem;
+    }
+
+    .visual-copy h1 {
+        font-size: 3.2rem;
+        line-height: 1.08;
+        margin: 16px 0 20px;
+    }
+
+    .visual-desc {
+        font-size: 1.4rem;
+        line-height: 1.55;
+        margin-bottom: 30px;
+    }
+
+    .visual-date {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .booking-card {
+        min-height: 0;
+        padding: 30px 22px;
+        border-radius: 22px;
+    }
+
+    .booking-head h2 {
+        font-size: 2.8rem;
+    }
+
+    .booking-head>p:last-child {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .option-group,
+    .people-group {
+        margin-top: 34px;
+    }
+
+    .option-group h3 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .option-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .chip,
+    .chip.people {
+        width: 100%;
+        min-width: 0;
+        height: 46px;
+        padding: 0 8px;
+        font-size: 1.4rem;
+    }
+
+    .notice {
+        margin: 16px 0 28px;
+        font-size: 1.3rem;
+        line-height: 1.55;
+    }
+
+    .summary {
+        height: 54px;
+        padding: 0 16px;
+        font-size: 1.4rem;
+    }
+
+    .reserve-btn {
+        height: 58px;
+        margin-top: 14px;
+        font-size: 1.6rem;
+    }
+
+    .faq-page {
+        padding: 66px 20px 82px;
+    }
+
+    .faq-section>h2 {
+        font-size: 2.8rem;
+        margin: 0 0 26px;
+    }
+
+    .faq-question {
+        min-height: 68px;
+        height: auto;
+        padding: 18px 4px;
+        font-size: 1.4rem;
+        line-height: 1.45;
+        gap: 18px;
+    }
+
+    .faq-icon {
+        font-size: 2.4rem;
+        flex-shrink: 0;
+    }
+
+    .faq-answer {
+        font-size: 1.3rem;
+        line-height: 1.65;
+    }
+
+    .faq-item.open .faq-answer {
+        max-height: 150px;
+        padding-bottom: 24px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-box {
+        width: 100%;
+        max-height: calc(100vh - 24px);
+        padding: 32px 22px 26px;
+        border-radius: 20px;
+    }
+
+    .modal-close {
+        right: 20px;
+        top: 19px;
+        font-size: 2.8rem;
+    }
+
+    .modal-box h2 {
+        font-size: 2.4rem;
+        padding-right: 32px;
+    }
+
+    .modal-intro {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        padding-right: 18px;
+    }
+
+    .modal-summary {
+        height: 76px;
+        padding: 13px 16px;
+    }
+
+    .modal-summary strong {
+        font-size: 1.4rem;
+    }
+
+    .modal-summary span {
+        font-size: 1.2rem;
+    }
+
+    .modal-box input[type=text],
+    .modal-box input[type=tel],
+    .modal-box input[type=email] {
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .privacy {
+        align-items: flex-start;
+        font-size: 1.2rem;
+        line-height: 1.45;
+    }
+
+    .privacy input {
+        flex: 0 0 20px;
+    }
+
+    .modal-actions {
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+        margin-top: 28px;
+    }
+
+    .cancel-btn,
+    .confirm-btn {
+        height: 52px;
+        font-size: 1.4rem;
+    }
+
+    .footer {
+        height: 360px;
+        min-height: 360px;
+    }
+
+    .footer-inner {
+        height: 360px;
+        padding: 0;
+    }
+
+    .footer-logo {
+        left: 20px;
+        top: 26px;
+        width: 145px;
+        height: 81px;
+    }
+
+    .footer-line {
+        left: 20px;
+        right: 20px;
+        top: 100px;
+        width: auto;
+    }
+
+    .footer-content {
+        left: 20px;
+        right: 20px;
+        top: 116px;
+    }
+
+    .footer-menu {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .footer-menu span {
+        margin: 0 4px;
+    }
+
+    .company-info {
+        margin-top: 14px;
+    }
+
+    .company-info p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 2px;
+        white-space: normal;
+    }
+
+    .copyright {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-top: 18px;
+    }
+
+    .footer-sns {
+        position: static;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .footer-sns a,
+    .footer-sns img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-sns a {
+        flex-basis: 30px;
+    }
+}

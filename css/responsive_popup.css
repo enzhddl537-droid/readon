@@ -1,0 +1,232 @@
+@media screen and (max-width: 1800px) {
+    .modal_overlay .sns img:hover {
+        transform: scale(0);
+    }
+
+    .modal_overlay .slide_btn:hover {
+
+        opacity: 1;
+    }
+    .br {
+        display: none;
+    }
+
+    /* =====================================
+       아래 책 / 영상 콘텐츠 숨기기
+    ===================================== */
+
+    .modal_overlay .book,
+    .modal_overlay .person_bottom,
+    .modal_overlay .media,
+    .modal_overlay .kmk_media {
+        display: none;
+    }
+    .modal_overlay .content_card {
+        background: transparent;
+        box-shadow: none;
+    }
+
+
+    /* =====================================
+       PERSON 전체 중앙 정렬
+    ===================================== */
+
+    .modal_overlay .person {
+        
+        
+
+        padding: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =====================================
+       사진 + 설명
+
+       사진
+        ↓
+       설명
+
+       세로 배치
+    ===================================== */
+
+    .modal_overlay .person_top {
+        width: 60%;
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================
+       프로필 사진
+    ===================================== */
+
+    .modal_overlay .profile {
+        flex: none;
+
+        width: 220px;
+        height: 220px;
+
+        object-fit: cover;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================
+       설명 영역
+    ===================================== */
+
+    .modal_overlay .history {
+        width: 100%;
+
+        flex: none;
+
+        min-width: 0;
+
+        margin: 0 auto;
+    }
+
+
+    /* 이름 / 직업 / SNS */
+    .modal_overlay .history_sub {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /* =====================================
+       연혁
+    ===================================== */
+
+    .modal_overlay .history_career {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        margin-top: 17px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+    /* 1200px 이하에서도 북토크 상세 팝업 유지
+       화면이 좁아질수록 팝업/내부 요소가 함께 축소되도록 구성 */
+    .modal_overlay .modal {
+        display: block;
+        width: 76vw;
+        min-width: 580px;
+        max-width: 900px;
+        height: 76vh;
+        min-height: 520px;
+        max-height: 720px;
+    }
+
+    .modal_overlay .content_card {
+        top: 10%;
+        width: 78%;
+        height: 70%;
+    }
+
+    .modal_overlay .person {
+        padding: clamp(16px, 2vw, 24px);
+    }
+
+    .modal_overlay .person_top {
+        width: min(78%, 520px);
+        gap: clamp(14px, 2vh, 22px);
+    }
+
+    .modal_overlay .profile {
+        width: clamp(150px, 17vw, 205px);
+        height: clamp(150px, 17vw, 205px);
+    }
+
+    .modal_overlay .history_career {
+        gap: clamp(14px, 2vw, 22px);
+        margin-top: clamp(10px, 1.5vh, 16px);
+    }
+
+    .modal_overlay .job,
+    .modal_overlay .history_career,
+    .modal_overlay .year li,
+    .modal_overlay .career_list li {
+        font-size: clamp(12px, 1.25vw, 15px);
+    }
+
+    .modal_overlay .name {
+        font-size: clamp(16px, 1.6vw, 20px);
+    }
+
+    .modal_overlay .sns img {
+        width: clamp(16px, 1.8vw, 20px);
+        height: clamp(16px, 1.8vw, 20px);
+    }
+
+    .modal_overlay .modal_close {
+        top: clamp(20px, 3vw, 34px);
+        right: clamp(22px, 3vw, 36px);
+        width: clamp(18px, 2vw, 24px);
+        height: clamp(18px, 2vw, 24px);
+    }
+
+    .modal_overlay .slide_btn {
+        top: 50%;
+        width: clamp(34px, 4vw, 42px);
+        height: clamp(34px, 4vw, 42px);
+    }
+
+    .modal_overlay .slide_btn img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal_overlay .prev {
+        left: clamp(18px, 3vw, 34px);
+    }
+
+    .modal_overlay .next {
+        right: clamp(18px, 3vw, 34px);
+    }
+
+    .modal_overlay .cta {
+        bottom: clamp(20px, 3.5vh, 34px);
+        width: clamp(118px, 14vw, 142px);
+        height: clamp(44px, 5vw, 52px);
+        font-size: clamp(15px, 1.6vw, 18px);
+    }
+}
+
+
+/* =====================================
+   북토크 상세 팝업 노출 기준
+   1200px 이상: 사용 / 1199px 이하: 비활성
+===================================== */
+@media screen and (max-width: 1199.98px) {
+    .modal_overlay {
+        display: none !important;
+        pointer-events: none !important;
+    }
+}

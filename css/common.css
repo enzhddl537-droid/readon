@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+:root {
+    --color-point1: #1d2015;
+    --color-point2: #4d5838;
+    --color-bg: #fafbfb;
+    --color-sub-bg: #d9d9d9;
+    --fs-main-title: 36px;
+    --fs-sub-title: 28px;
+    --fs-desc: 20px;
+    --fs-body: 16px;
+    --line-height-default: 1.5;
+    --fw-bold: 700;
+    --fw-medium: 500;
+    --fw-regular: 400;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../font_pretendard/public/static/Pretendard-Bold.otf);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    color: var(--color-point1);
+    background: var(--color-bg);
+    font-family: 'Pretendard';
+    line-height: var(--line-height-default);
+    overflow-x: hidden;
+}
+
+li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+/* img { display: block; max-width: 100%; } */
